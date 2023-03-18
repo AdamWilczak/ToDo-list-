@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="pic/ogImage.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" href="pic/pageIcon.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script defer src="js/script.js"></script>
+
+  <title>Simple ToDo list</title>
+</head>
+<body>
+
+<main>
+  <header>
+    <h1>Simple TODO list</h1>
+  </header>
+  <section class="section">
+    <div class="section__content">
+      <h2 class="section__header">Add new task</h2>
+    </div>
+    <div class="section__content">
+      <form class="js-form form">
+        <input class="form__input js-newTask" autofocus required placeholder="What are your tasks??">
+        <button class="form__submitButton">Add</button>
+      </form>
+    </div>
+  </section>
+  <section class="section">
+    <div class="section__content">
+      <h2 class="section__header">List</h2>
+    </div>
+    <div class="section__content">
+      <ul class="js-tasks section__taskList"></ul>
+    </div>
+  </section>
+</main>
+
+  
+</body>
+</html>
