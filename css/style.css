@@ -140,7 +140,7 @@ h1 {
 .task__button.task__button--done:hover {
     background-color: #005a00;
     color: black;
-    transform: scale(1.1);
+    border-radius: 50%;
 }
 
 .task__button.task__button--remove {
@@ -152,5 +152,6 @@ h1 {
 .task__button.task__button--remove:hover {
     background-color: #e04e4e;
     color: black;
-    transform: scale(1.1);
+    border-radius: 50%;
+    
 }
