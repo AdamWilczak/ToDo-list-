@@ -17,33 +17,36 @@
 
   <title>Simple ToDo list</title>
 </head>
+
+
 <body>
+  <main class="container">
+    <header>
+      <h1>Simple TODO list</h1>
+    </header>
 
-<main>
-  <header>
-    <h1>Simple TODO list</h1>
-  </header>
-  <section class="section">
-    <div class="section__content">
-      <h2 class="section__header">Add new task</h2>
-    </div>
-    <div class="section__content">
-      <form class="js-form form">
-        <input class="form__input js-newTask" autofocus required placeholder="What are your tasks??">
-        <button class="form__submitButton">Add</button>
-      </form>
-    </div>
-  </section>
-  <section class="section">
-    <div class="section__content">
-      <h2 class="section__header">List</h2>
-    </div>
-    <div class="section__content">
-      <ul class="js-tasks section__taskList"></ul>
-    </div>
-  </section>
-</main>
+    <section class="section">
+      <h2 class="section__header">Add task</h2>
+      <div class="section">
+        <form class="js-form form">
+          <input class="js-newTask form__input" placeholder="What is your task?">
+          <button class="form__button">Add</button>
+        </form>
+      </div>
+    </section>
+    <section class="section">
+      <header class="section__header">
+        <h2 class="section__tittle">Tasks list</h2>
+        <div class="js-buttons buttons"></div>
+      </header>
 
-  
+      <div class="section">
+        <ul class="js-tasks tasksList">
+        </ul>
+      </div>
+    </section>
+  </main>
 </body>
+
 </html>
+

@@ -12,7 +12,7 @@ html {
 
 body {
     background-color: #e6e6e6;
-    font-family: "Lato", sans-serif;
+    font-family: "Poppins", sans-serif;
     word-break: break-word;
     max-width: 1000px;
     min-width: 320px;
@@ -31,127 +31,149 @@ h1 {
 
 .form {
     display: grid;
-    grid-template-columns: auto 100px;
-    grid-gap: 10px;
-    margin: 10px;
+    grid-template-columns: 1fr auto;
+    grid-gap: 20px;
 }
 
 .form__input {
+    border: solid 1px #e5e2e2;
     padding: 10px;
-    border: solid #8f8f8f 1px;
 }
 
-.form__submitButton {
-    font-size: 20px;
-    padding: 10px;
-    background-color: hsl(180, 100%, 25%);
-    color: #ffffff;
+.form__button {
     border: none;
-    cursor: pointer;
-    border-radius: 50px;
-    transition: 0.5s;
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    width: 80px;
+    border-radius: 20px;
+    transition: 0, 8 ease-in-out;
 }
 
-.form__submitButton:hover {
+.form__button:hover {
+    background-color: hsl(180, 100%, 43%);
     transform: scale(1.1);
-    background-color: hsl(180, 100%, 30%);
     color: black;
-
 }
 
-@media (max-width: 768px) {
-    .section__header {
-        font-size: 150%;
-    }
-
+@media (max-width: 767px) {
     .form {
+        grid-template-columns: auto;
+    }
+    .form__button {
+        width: 100%;
+    }
+    .form__button:hover {
+        transform: none;
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.buttons__button {
+    background: transparent;
+    color: hsl(180, 100%, 25%);
+    transition: color 1s;
+    border: none;
+    margin: 0 0 0 20px;
+}
+
+@media (max-width: 767px) {
+    .buttons__button {
+        flex-basis: 100%;
         margin: 10px;
-        display: flex;
-        flex-wrap: wrap;
     }
+}
 
-    .form__input {
-        margin: 0 auto;
-        width: 100%;
-    }
+.buttons__button:hover {
+    color: hsl(180, 100%, 30%);
+    text-decoration: underline;
+    cursor: pointer;
+}
 
-    .form__submitButton {
-        margin: 0 auto;
-        margin-top: 10px;
-        width: 100%;
+.buttons__button:disabled {
+    color: hsl(0, 0%, 80%);
+}
+.section {
+    background-color: whitesmoke;
+    margin: 10px 0;
+}
+
+.section__header {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
+    border-bottom: solid 1px #e5e2e2;
+}
+
+@media (max-width: 767px) {
+    .section__header {
+        grid-template-columns: 1fr;
     }
 }
 
 .section {
-    margin: 10px 0px;
-    box-shadow: 0px 0px 5px 0px #b3b3b3;
-}
-
-.section__header {
-    font-size: 20px;
-    font-weight: 900;
-    margin-left: 10px;
-}
-
-.section__content {
     padding: 10px;
-    background-color: #ffffff;
-    border-width: 0px;
-    border-bottom: 2px;
-    border-style: solid;
-    border-color: #e6e6e6;
-    line-height: 150%;
 }
 
-.section__taskList {
+.tasksList {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.task {
+.tasksList__item {
     display: grid;
-    grid-template-columns: 30px auto 30px;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
-    grid-gap: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-right: 10px;
-    margin-left: -30px;
-    border-bottom: 1px solid #9e9e9e;
+    grid-gap: 10px;
+    border-bottom: solid 1px #e5e2e2;
+    padding: 10px;
 }
 
-.task--done {
-    text-decoration: line-through;
+.tasksList__item--hidden {
+    display: none;
 }
 
-.task__button {
-    min-width: 30px;
-    min-height: 30px;
-    padding: 5px;
+.tasksList__button {
+    width: 30px;
+    height: 30px;
     border: none;
-    cursor: pointer;
+    color: white;
+    transition: 1s;
 }
 
-.task__button.task__button--done {
-    background-color: #023602;
-    color: #ffffff;
-    transition: 0.5s;
+.tasksList__button--done {
+    background-color: hsl(120, 95%, 16%);
 }
 
-.task__button.task__button--done:hover {
-    background-color: #005a00;
-    color: black;
+.tasksList__button--done:hover {
+    background-color: hsl(120, 100%, 32%);
     border-radius: 50%;
-}
-
-.task__button.task__button--remove {
-    background-color: #e20808;
-    color: #ffffff;
-    transition: 0.5s;
-}
-
-.task__button.task__button--remove:hover {
-    background-color: #e04e4e;
     color: black;
+}
+
+.tasksList__button--remove {
+    background-color: hsl(0, 95%, 40%);
+}
+
+.tasksList__button--remove:hover {
+    background-color: hsl(0, 100%, 65%);
     border-radius: 50%;
-    
+    color: black;
+}
+
+.tasksList__content {
+    font-size: 20px;
+}
+
+.tasksList__content--done {
+    text-decoration: line-through;
 }
