@@ -44,11 +44,19 @@ h1 {
 .form__submitButton {
     font-size: 20px;
     padding: 10px;
-    background-color: #008080;
+    background-color: hsl(180, 100%, 25%);
     color: #ffffff;
     border: none;
     cursor: pointer;
     border-radius: 50px;
+    transition: 0.5s;
+}
+
+.form__submitButton:hover {
+    transform: scale(1.1);
+    background-color: hsl(180, 100%, 30%);
+    color: black;
+
 }
 
 @media (max-width: 768px) {
@@ -126,9 +134,23 @@ h1 {
 .task__button.task__button--done {
     background-color: #023602;
     color: #ffffff;
+    transition: 0.5s;
+}
+
+.task__button.task__button--done:hover {
+    background-color: #005a00;
+    color: black;
+    transform: scale(1.1);
 }
 
 .task__button.task__button--remove {
     background-color: #e20808;
     color: #ffffff;
+    transition: 0.5s;
+}
+
+.task__button.task__button--remove:hover {
+    background-color: #e04e4e;
+    color: black;
+    transform: scale(1.1);
 }
